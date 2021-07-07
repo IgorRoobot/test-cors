@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test-cors/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/test-cors/static/js/main.9136c6cc.chunk.js",
+    "main.js.map": "/test-cors/static/js/main.9136c6cc.chunk.js.map",
+    "runtime-main.js": "/test-cors/static/js/runtime-main.9f4f9545.js",
+    "runtime-main.js.map": "/test-cors/static/js/runtime-main.9f4f9545.js.map",
+    "static/js/2.64fad121.chunk.js": "/test-cors/static/js/2.64fad121.chunk.js",
+    "static/js/2.64fad121.chunk.js.map": "/test-cors/static/js/2.64fad121.chunk.js.map",
+    "static/js/3.ccf057bc.chunk.js": "/test-cors/static/js/3.ccf057bc.chunk.js",
+    "static/js/3.ccf057bc.chunk.js.map": "/test-cors/static/js/3.ccf057bc.chunk.js.map",
+    "index.html": "/test-cors/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/test-cors/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.64fad121.chunk.js.LICENSE.txt": "/test-cors/static/js/2.64fad121.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/test-cors/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f4f9545.js",
+    "static/js/2.64fad121.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.9136c6cc.chunk.js"
+  ]
+}

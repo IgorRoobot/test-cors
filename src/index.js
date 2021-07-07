@@ -4,9 +4,42 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+
+import { setContext } from '@apollo/client/link/context';
+
+const httpLink = createHttpLink({
+  uri: 'https://interview-api-app.herokuapp.com/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJfaWQiOiI2MGU0MmQyMzQ2MTI2NjFhYzNkYmZmYWYiLCJpYXQiOjE2MjU1NzY0MDYsImV4cCI6MTYyNTY2MjgwNn0.Zoom5TecxNHE1bbYcT6GtCEpP81ThU9SxMUcyGKibmg';
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+const client = new ApolloClient({
+  //   uri: 'https://interview-api-app.herokuapp.com/graphql',
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
